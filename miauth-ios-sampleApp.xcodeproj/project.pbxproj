@@ -12,6 +12,7 @@
 		8B3249A21CAFD80700786EB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3249A01CAFD80700786EB3 /* Main.storyboard */; };
 		8B3249A41CAFD80700786EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3249A31CAFD80700786EB3 /* Assets.xcassets */; };
 		8B3249A71CAFD80700786EB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3249A51CAFD80700786EB3 /* LaunchScreen.storyboard */; };
+		8BE040421CB1A58000154EA0 /* MiauthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE040411CB1A58000154EA0 /* MiauthClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8B3249A31CAFD80700786EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3249A61CAFD80700786EB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3249A81CAFD80700786EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE040411CB1A58000154EA0 /* MiauthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiauthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		8B3249901CAFD80700786EB3 = {
 			isa = PBXGroup;
 			children = (
+				8B3249AE1CB1A3F300786EB3 /* miauthClient */,
 				8B32499B1CAFD80700786EB3 /* miauth-ios-sampleApp */,
 				8B32499A1CAFD80700786EB3 /* Products */,
 			);
@@ -61,6 +64,15 @@
 				8B3249A51CAFD80700786EB3 /* LaunchScreen.storyboard */,
 				8B3249A81CAFD80700786EB3 /* Info.plist */,
 			);
+			path = "miauth-ios-sampleApp";
+			sourceTree = "<group>";
+		};
+		8B3249AE1CB1A3F300786EB3 /* miauthClient */ = {
+			isa = PBXGroup;
+			children = (
+				8BE040411CB1A58000154EA0 /* MiauthClient.swift */,
+			);
+			name = miauthClient;
 			path = "miauth-ios-sampleApp";
 			sourceTree = "<group>";
 		};
@@ -137,6 +149,7 @@
 			files = (
 				8B32499F1CAFD80700786EB3 /* ViewController.swift in Sources */,
 				8B32499D1CAFD80700786EB3 /* AppDelegate.swift in Sources */,
+				8BE040421CB1A58000154EA0 /* MiauthClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +301,7 @@
 				8B3249AD1CAFD80700786EB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
