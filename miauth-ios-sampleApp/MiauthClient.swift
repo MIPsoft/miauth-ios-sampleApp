@@ -36,7 +36,7 @@ class MiauthClient {
     }
     
     func authenticate() -> Bool {
-        if let miauthURL:NSURL = NSURL(string:"miauth://authenticate?callbackurl=com.mipsoft.miauth-ios-sampleApp&app=miAuth+esimerkkiohjelma") {
+        if let miauthURL:NSURL = NSURL(string:"miauth://authenticate?callbackurl=com.mipsoft.miauth-ios-sampleApp&app=miAuth-esimerkkiohjelma") {
             let application:UIApplication = UIApplication.sharedApplication()
             if (application.canOpenURL(miauthURL)) {
                 application.openURL(miauthURL);
