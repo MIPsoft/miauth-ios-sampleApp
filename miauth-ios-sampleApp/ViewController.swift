@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var buttonLogin:UIButton!
+    @IBOutlet weak var textViewStatus:UITextView!
     
     var miauthClient = MiauthClient.sharedInstance
     
@@ -25,7 +26,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonLoginPressed(sender:UIButton!) {
-        miauthClient.authenticate()
+        miauthClient.authenticate( {self.gotBackFromOtherApp() })
+    }
+    
+    func gotBackFromOtherApp() {
+        switch miauthClient.authenticationState {
+        case .Ok:
+            textViewStatus.text = "Sovellukseen on kirjauduttu."
+        case .Fail:
+            textViewStatus.text = "Kirjautuminen on peruttu."
+        default:
+            textViewStatus.text = ""
+        }
+        
+        if let name = miauthClient.authenticationData["name"] {
+            textViewStatus.text = textViewStatus.text + "\n\nNimi = \(name)"
+        }
+        if let email = miauthClient.authenticationData["email"] {
+            textViewStatus.text = textViewStatus.text + "\n\nEmail = \(email)"
+        }
+        
     }
 
 }

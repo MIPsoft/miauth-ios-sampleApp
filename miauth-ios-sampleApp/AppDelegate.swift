@@ -42,8 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        print("Received \(url) from \(sourceApplication)")
-        return true
+        return MiauthClient.sharedInstance.callBackURL(url,fromApplication:sourceApplication);
     }
 
 }
